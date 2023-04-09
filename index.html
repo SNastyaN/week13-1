@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">Сервис комментариев</header>
+    <main class="container">
+        <h1>Оставьте ваш комментарий</h1>
+        показать имя<input type="radio" name="check" id="check"/><br/>
+        скрыть имя<input type="radio" name="check" id="checkNo"/><br/>
+        <label>Введите ваше ФИО:</label>
+        <input type="text" id="name" onclick ="nameMy()">
+        <label >Введите ссылку вашего аватара:</label>
+        <input type="text" id="avatar" onclick="changeImg()"/>
+        <label >Оставьте комментарий:</label>
+        <textarea rows="10" id="comment" onkeypress="Com()"></textarea>
+        <img class="avatar" width="100px" alt="avatar">
+        <div class="ResultComm"></div>
+        <label for="chat">Чат:</label>
+        <textarea rows="1" id="result"></textarea>
+        <button id="button" type="reset">отравить</button>
+    
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
