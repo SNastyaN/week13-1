@@ -1,7 +1,7 @@
 let avatar= document.querySelector('.avatar');
 
 let radio = document.getElementById('checkNo');
-let text = document.getElementById('comment').value;
+
 let date = new Date().toLocaleString()
 
 
@@ -32,23 +32,22 @@ else {
 function nameMy() {
     let MyName = document.getElementById('name').value;
     let small = MyName.toLowerCase();
-    document.querySelector('#result').value = small;
+    document.querySelector('#result').innerHTML = small;
 
     if (radio.checked){
-        MyName = "Gest";
+        small = "Gest";
     }
     
 }
-
+let text = document.getElementById('comment').value;
 function Com(){
     
-    const textResult= text.replace(/XXX/gi, "***");
-    document.querySelector('#result').value = textResult;
+    let text= text.replace(/XXX/gi, "***");
+    document.querySelector('#chat').innerHTML = text;
+    
 }
-
-
+console.log(text);
 
 button.addEventListener('click', changeImg)
 button.addEventListener('click', nameMy)
 button.addEventListener('click', Com)
-document.getElementById('ResultComm').innerHTML += `<div><img id ="avatarNew" src=${avatar} width="100px" height="100px"><p class="result">${MyName}</p><p class="date">${date}</p></div>`
